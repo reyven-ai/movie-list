@@ -1,0 +1,62 @@
+form {
+  display: flex;
+  position: absolute;
+  right: 222px;
+  top: 45px;
+  width: 30%;
+  justify-content: flex-end;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    /* align-items: center; */
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+.search img {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin-top: 3px;
+    transform: rotate(5deg);
+}
+
+input {
+    height: 35px;
+    width: 230px;
+    border: 1px solid white;
+    background-color: black;
+    padding: 0.5rem;
+    transition: width 0.3s ease-in-out;
+    color: white;
+    font-size: 14px;
+
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    /* position: absolute; 
+    right: 215px;
+    top: 42px; */
+    /* justify-content: center; */
+  }
+  
+  .searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* input {
+    border: none;
+    padding: 5px;
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Add transition property */
+  
+  input:focus {
+    width: 230px; /* Adjust the width as needed */
+    outline: none;
+  }

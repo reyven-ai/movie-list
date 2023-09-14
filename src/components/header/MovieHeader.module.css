@@ -1,0 +1,164 @@
+.header {
+  margin: auto;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 15px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 28px;
+  text-decoration: none;
+  color: lightblue;
+  /* padding: 20px; */
+  margin-top: 30px;
+}
+
+nav {
+  display: flex;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600px;
+  font-size: 16px;
+  margin-left: 1rem;
+}
+
+.list a {
+  text-decoration: none;
+  /* color: var(--color-primary-400); */
+  color: white;
+}
+
+.list a:hover,
+.list a.active {
+  /* color: var(--color-primary-800); */
+  color: white;
+  font-weight: 600;
+}
+
+.handle {
+  display: flex;
+  align-items: center;
+  /* gap: 15px; */
+}
+
+.authentication {
+  display: flex;
+}
+
+.authentication div {
+  padding-left: 1rem;
+  color: white;
+}
+
+form {
+  display: flex;
+  /* position: absolute;
+  right: 222px;
+  top: 45px;
+  width: 30%; */
+  justify-content: flex-end;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  /* align-items: center; */
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+.search img {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  margin-top: 3px;
+  transform: rotate(5deg);
+}
+
+input {
+  height: 35px;
+  width: 230px;
+  border: 1px solid white;
+  background-color: black;
+  padding: 0.5rem;
+  transition: width 0.3s ease-in-out;
+  color: white;
+  font-size: 14px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input:focus {
+  width: 230px;
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    padding: 2% 5%;
+  }
+
+  .logo {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    display: none;
+  }
+
+  .authentication {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo a {
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: lightblue;
+    /* padding: 20px; */
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+  input {
+    display: none;
+  }
+
+  .authentication {
+    display: none;
+  }
+}

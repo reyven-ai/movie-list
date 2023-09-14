@@ -3,16 +3,32 @@ import Triangle from "../../asset/triangle.png";
 import { Link } from "react-router-dom";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import classes from "./MovieItem.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addToFavorites, removeFromFavorites } from "../../store/actions/movie";
 
 function MovieItem({ movie }) {
   const [isLoading, setIsLoading] = useState(true);
-  const { id, title, poster_path } = movie;
+  const { ids, titles, poster_paths } = movie;
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites); // Assuming you have a favorites state in your Redux store
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
   }, []);
+
+  const isMovieInFavorites = favorites.some(
+    (favMovie) => favMovie.id === movie.id
+  );
+
+  const handleToggleFavorites = () => {
+    if (isMovieInFavorites) {
+      dispatch(removeFromFavorites(movie.id));
+    } else {
+      dispatch(addToFavorites(movie));
+    }
+  };
 
   return (
     <>
@@ -23,30 +39,30 @@ function MovieItem({ movie }) {
           </SkeletonTheme>
         </div>
       ) : (
-        <li key={movie.id} className={classes.item}>
-          <Link to={`/movie/${id}`}>
+        <li key={movie.ids} className={classes.item}>
+          <Link to={`/movie/${ids}`}>
             <img
-              src={`https://image.tmdb.org/t/p/w1280${poster_path}`}
-              alt={title}
+              src={`https://image.tmdb.org/t/p/w1280${poster_paths}`}
+              alt={titles}
             />
           </Link>
           <div>
             <div className={classes.overview}>
               <div className={classes.btn1}>
                 <button>
-                  <img src={Triangle} alt="tiangle" />
+                  <img src={Triangle} alt="triangle" />
                 </button>
               </div>
               <div className={classes.btn2}>
-                <button>+</button>
-                {/* <button>+</button> */}
+                <button onClick={handleToggleFavorites}>
+                  {isMovieInFavorites ? "-" : "+"}
+                </button>
               </div>
             </div>
           </div>
         </li>
       )}
     </>
-    //{" "}
   );
 }
 

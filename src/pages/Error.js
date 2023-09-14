@@ -1,13 +1,16 @@
-import MainNavigation from "../components/header/MainNavigation";
+// import MainNavigation from "../components/header/MainNavigation";
+import MovieHeader from "../components/header/MovieHeader";
 
 function ErrorPage() {
-    return <>
-    <main>
-        <MainNavigation />
+  return (
+    <>
+      <main>
+        <MovieHeader />
         <h1>An error occured!</h1>
         <p>Could not find this page!</p>
-    </main>
+      </main>
     </>
+  );
 }
 
 export default ErrorPage;

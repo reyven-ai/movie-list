@@ -1,18 +1,17 @@
-import { Outlet } from "react-router"
+import { Outlet } from "react-router";
 
-import MainNavigation from '../components/header/MainNavigation';
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/header/MovieHeader";
 
 function RootLayout() {
-    return (
+  return (
     <>
-    <MainNavigation />
-    <SearchBar />
-   <main>
-       <Outlet />
-   </main>
+      {/* <MainNavigation /> */}
+      <SearchBar />
+      <main>
+        <Outlet />
+      </main>
     </>
-    );
+  );
 }
 
 export default RootLayout;

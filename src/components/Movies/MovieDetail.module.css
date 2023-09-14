@@ -1,11 +1,19 @@
+.background img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
 .detail {
   text-align: left;
   display: flex;
   /* margin-left: 3rem; */
-  padding: 0 2rem;
+  padding: 0 5rem;
   gap: 30px;
-  justify-content: left;
   align-items: center;
+  position: absolute;
+  top: 187px;
 }
 
 .related {
@@ -21,10 +29,10 @@
 }
 
 .detail img {
-  width: 30%;
-  height: 600px;
+  width: 50%;
+  height: 450px;
   /* height: 00%; */
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   margin-top: 0;
 }
@@ -67,7 +75,7 @@ li {
 .btn1 button {
   background-color: white;
   color: black;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
   font-size: 15px;
   display: flex;
   border-radius: 4px;
@@ -94,8 +102,8 @@ li {
 .close {
   text-align: left;
   position: absolute;
-  left: 210px;
-  top: 160px;
+  left: 12px;
+  top: 122px;
   background-color: black;
   padding: 0.1rem 0.5rem;
   border-radius: 70px;
@@ -115,4 +123,124 @@ li {
   object-fit: contain;
   border-radius: 6px;
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 20px;
+  }
+
+  .detail {
+    text-align: left;
+    display: flex;
+    /* margin-left: 3rem; */
+    padding: 0 5rem;
+    gap: 30px;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+  }
+
+  .close {
+    text-align: left;
+    position: absolute;
+    left: 12px;
+    top: 90px;
+    background-color: black;
+    padding: 0.1rem 0.5rem;
+    border-radius: 70px;
+    align-items: center;
+  }
+
+  @media (max-width: 500px) {
+    .detail {
+      display: block;
+      /* margin-left: 3rem; */
+      padding: 0 1rem;
+      align-items: center;
+    }
+    .close {
+      text-align: left;
+      position: absolute;
+      left: 12px;
+      top: 100px;
+      background-color: black;
+      padding: 0.1rem 0.5rem;
+      border-radius: 70px;
+      align-items: center;
+    }
+    .detail img {
+      width: 100%;
+      height: 100%;
+      /* height: 00%; */
+      object-fit: fill;
+      margin-top: 0;
+      border-radius: 5px;
+    }
+
+    .detail h2 {
+      font-size: 18px;
+      height: 5px;
+      margin-top: 0;
+    }
+
+    .detail p {
+      width: 100%;
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .close {
+      text-align: left;
+      position: absolute;
+      left: 25px;
+      top: 60px;
+      background-color: black;
+      padding: 0rem 0.4rem;
+      border-radius: 70px;
+      align-items: center;
+    }
+    .close img {
+      width: 17px;
+      height: 17px;
+      margin-top: 6px;
+    }
+    ul {
+      display: none;
+      margin-top: 5px;
+    }
+
+    /* li {
+    font-weight: 500;
+    font-size: 14px;
+  } */
+
+    /* .cast img {
+    display: none;
+  } */
+
+    .btn {
+      display: flex;
+      gap: 17px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .btn1 button {
+      background-color: white;
+      color: black;
+      padding: 0.3rem 0.6rem;
+      font-size: 15px;
+      display: flex;
+      border-radius: 4px;
+      align-items: center;
+    }
+
+    .btn img {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+    }
+  }
 }
